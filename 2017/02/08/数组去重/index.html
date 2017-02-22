@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>数组去重 | IT小魔女</title>
+  <title>javascript数组去重最优解 | IT小魔女</title>
   <meta name="author" content="littleredhat">
   
-  <meta name="description" content="利用对象的属性去重1234567891011121314&amp;lt;script&amp;gt;var arr = [1,3,5,5,1,2,77,4,32,2,3];	var temp = [];//规定一个新数组；用来保存最终输出的数组	var obj = &amp;#123;&amp;#125;;//空对象 	for(v">
+  <meta name="description" content="javascript数组去重最优解利用对象的属性来去重。
+1234567891011121314&amp;lt;script&amp;gt;	var arr = [1,3,5,5,1,2,77,4,32,2,3];	var temp = [];     //规定一个新数组；用来保存最终输出的数组	var obj =">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="数组去重"/>
+  <meta property="og:title" content="javascript数组去重最优解"/>
   <meta property="og:site_name" content="IT小魔女"/>
 
   
@@ -71,10 +72,10 @@
   <div class="post-content">
     <header>
       
-      <time datetime="2017-01-05T08:03:11.000Z"><a href="/2017/01/05/数组去重/">Thu, Jan 5 2017, 4:03:11 pm</a></time>
+      <time datetime="2017-02-08T07:56:22.000Z"><a href="/2017/02/08/数组去重/">Wed, Feb 8 2017, 3:56:22 pm</a></time>
 
   
-    <h1 class="title">数组去重</h1>
+    <h1 class="title">javascript数组去重最优解</h1>
   
 
 
@@ -82,7 +83,7 @@
   
   <div class="tags">
   	<i class="fa fa-tag"></i>
-    <a href="/tags/数组/">数组</a>, <a href="/tags/对象的属性/">对象的属性</a>
+    <a href="/tags/js/">js</a>, <a href="/tags/数组操作/">数组操作</a>, <a href="/tags/技术/">技术</a>
   </div>
 
 <div class="clear"></div>
@@ -90,11 +91,8 @@
     </header>
     <div class="entry">
       
-        <h2 id="利用对象的属性去重"><a href="#利用对象的属性去重" class="headerlink" title="利用对象的属性去重"></a>利用对象的属性去重</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml"></span></div><div class="line">var arr = [1,3,5,5,1,2,77,4,32,2,3];</div><div class="line">	var temp = [];//规定一个新数组；用来保存最终输出的数组</div><div class="line">	var obj = &#123;&#125;;//空对象 </div><div class="line">	for(var i = 0; i <span class="tag">&lt; <span class="attr">arr.length</span>; <span class="attr">i</span>++)&#123;</span></div><div class="line">		<span class="attr">if</span>(!<span class="attr">obj</span>[<span class="attr">arr</span>[<span class="attr">i</span>]])&#123;//取反 <span class="attr">true</span> 变<span class="attr">false</span> 不通过 重复的排除  <span class="attr">obj.1</span>=<span class="string">1</span> <span class="attr">undefined</span>;<span class="attr">obj.3</span>=<span class="string">1</span> <span class="attr">undefined</span>; <span class="attr">obj.5</span>=<span class="string">1</span> <span class="attr">undefined</span></div><div class="line">			</div><div class="line">			<span class="attr">temp.push</span>(<span class="attr">arr</span>[<span class="attr">i</span>]); </div><div class="line">			<span class="attr">obj</span>[<span class="attr">arr</span>[<span class="attr">i</span>]] = <span class="string">1;</span></div><div class="line">			<span class="attr">console.log</span>(<span class="attr">obj</span>)</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="attr">console.log</span>(<span class="attr">temp</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>January 5, 2017 By <em>litteredhat</em></p>
-</blockquote>
-
+        <h1 id="javascript数组去重最优解"><a href="#javascript数组去重最优解" class="headerlink" title="javascript数组去重最优解"></a>javascript数组去重最优解</h1><p>利用对象的属性来去重。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml"></span></div><div class="line">	var arr = [1,3,5,5,1,2,77,4,32,2,3];</div><div class="line">	var temp = [];     //规定一个新数组；用来保存最终输出的数组</div><div class="line">	var obj = &#123;&#125;;     //空对象 </div><div class="line">	for(var i = 0; i <span class="tag">&lt; <span class="attr">arr.length</span>; <span class="attr">i</span>++)&#123;</span></div><div class="line">		<span class="attr">if</span>(!<span class="attr">obj</span>[<span class="attr">arr</span>[<span class="attr">i</span>]])&#123;</div><div class="line">//取反 <span class="attr">true</span> 变<span class="attr">false</span> 不通过 重复的排除  <span class="attr">obj.1</span>=<span class="string">1</span> <span class="attr">undefined</span>;<span class="attr">obj.3</span>=<span class="string">1</span> <span class="attr">undefined</span>; <span class="attr">obj.5</span>=<span class="string">1</span> <span class="attr">undefined</span>		</div><div class="line">			<span class="attr">temp.push</span>(<span class="attr">arr</span>[<span class="attr">i</span>]); </div><div class="line">			<span class="attr">obj</span>[<span class="attr">arr</span>[<span class="attr">i</span>]] = <span class="string">1;</span></div><div class="line">			<span class="attr">console.log</span>(<span class="attr">obj</span>)</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="attr">console.log</span>(<span class="attr">temp</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
     <footer>
@@ -131,11 +129,11 @@
 
 
 <section id="comment">
-  <h1 class="title">Comments</h1>
+  <h1 class="title">Kommentare</h1>
 
   
       <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread" data-thread-key="/2017/01/05/数组去重/"></div>
+<div class="ds-thread" data-thread-key="/2017/02/08/数组去重/"></div>
 <!-- Duoshuo Comment END -->
   
 </section>
