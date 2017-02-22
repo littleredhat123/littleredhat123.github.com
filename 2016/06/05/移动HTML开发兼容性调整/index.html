@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>移动HTML开发兼容性调整(meta篇) | IT小魔女</title>
+  <meta name="author" content="littleredhat">
+  
+  <meta name="description" content="移动HTML开发兼容性调整(meta篇)[TOC]
+控制视口在 &amp;lt;head&amp;gt; 标签中添加
+1&amp;lt;meta name=&quot;viewpor&quot; content=&quot;width=device-width, initial-scale=1, minimum-scale=1, maximun-scale=1, user-scalable=no&quot;&amp;gt;
+达到控制视口和控制缩放的效果。
+scale属性依次为：初始化缩放比例为1，最小缩放比例为1，最大缩放比例为1，是否允许用户缩放。
+关闭手机号码检测1&amp;lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&amp;gt;
+关闭邮箱检测为email">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="移动HTML开发兼容性调整(meta篇)"/>
+  <meta property="og:site_name" content="IT小魔女"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="IT小魔女" type="application/atom+xml">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="/css/style.css">
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-368771XX-X']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <header id="header" class='normal_mode'>
+    <nav id="main-nav">
+  <ul class='container'>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+  </header>
+  <div id="content" class="container">
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+      <time datetime="2016-06-05T07:56:22.000Z"><a href="/2016/06/05/移动HTML开发兼容性调整/">Sun, Jun 5 2016, 3:56:22 pm</a></time>
+
+  
+    <h1 class="title">移动HTML开发兼容性调整(meta篇)</h1>
+  
+
+
+
+  
+  <div class="tags">
+  	<i class="fa fa-tag"></i>
+    <a href="/tags/HTML/">HTML</a>, <a href="/tags/兼容性/">兼容性</a>, <a href="/tags/技术/">技术</a>
+  </div>
+
+<div class="clear"></div>
+      
+    </header>
+    <div class="entry">
+      
+        <h1 id="移动HTML开发兼容性调整-meta篇"><a href="#移动HTML开发兼容性调整-meta篇" class="headerlink" title="移动HTML开发兼容性调整(meta篇)"></a>移动HTML开发兼容性调整(meta篇)</h1><p>[TOC]</p>
+<h2 id="控制视口"><a href="#控制视口" class="headerlink" title="控制视口"></a>控制视口</h2><p>在 <code>&lt;head&gt;</code> 标签中添加</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewpor"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1, minimum-scale=1, maximun-scale=1, user-scalable=no"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>达到控制视口和控制缩放的效果。</p>
+<p>scale属性依次为：初始化缩放比例为1，最小缩放比例为1，最大缩放比例为1，是否允许用户缩放。</p>
+<h2 id="关闭手机号码检测"><a href="#关闭手机号码检测" class="headerlink" title="关闭手机号码检测"></a>关闭手机号码检测</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telephone=no"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>关闭邮箱检测为email</p>
+<a id="more"></a>
+<h2 id="强制渲染"><a href="#强制渲染" class="headerlink" title="强制渲染"></a>强制渲染</h2><p>以下代码可以强制使网页以webkit内核渲染：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"chrome=1"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>该命令不支持IE浏览器，可使用以下命令使IE用最高版本渲染：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge, chrome=1"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="UC强制全屏"><a href="#UC强制全屏" class="headerlink" title="UC强制全屏"></a>UC强制全屏</h2><p>以下代码使UC浏览器强制全屏显示页面：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"full-screen"</span> <span class="attr">content</span>=<span class="string">"yes"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="禁止百度自动转码"><a href="#禁止百度自动转码" class="headerlink" title="禁止百度自动转码"></a>禁止百度自动转码</h2><p>以下代码禁止百度自动转码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Cache-Control"</span> <span class="attr">content</span>=<span class="string">"no-siteapp"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="添加智能APP广告条"><a href="#添加智能APP广告条" class="headerlink" title="添加智能APP广告条"></a>添加智能APP广告条</h2><p>以下代码在safari浏览器上使用智能广告条：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-itunes-app"</span> <span class="attr">content</span>=<span class="string">"app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"</span>&gt;</span> 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari）</div></pre></td></tr></table></figure>
+<h2 id="极速模式"><a href="#极速模式" class="headerlink" title="极速模式"></a>极速模式</h2><p>以下代码使浏览器强制使用极速模式（bootstrap官方文档有介绍）：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit"</span>&gt;</span>启用浏览器的极速模式(webkit)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>December 15, 2016 By <em>littleredhat</em></p>
+</blockquote>
+
+      
+    </div>
+    <footer>
+      
+          
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <span class="jiathis_txt">分享到：</span>
+  <a class="jiathis_button_weixin">微信</a>
+  <a class="jiathis_button_tsina">新浪微博</a>
+  <a class="jiathis_button_renren">人人网</a>
+  <a class="jiathis_button_qzone">QQ空间</a>
+  <a class="jiathis_button_douban">豆瓣</a>
+  <a class="jiathis_button_pocket">Pocket</a>
+  <a href="http://www.jiathis.com/share?uid=901656" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=901656" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          <div class="clearfix"></div>
+          <nav id="pagination">
+  
+    <a href="/2016/12/25/css实现多级下拉菜单/" class="alignleft prev"><i class="fa fa-long-arrow-left"></i>Next</a>
+  
+  
+  <div class="clearfix"></div>
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+      <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-thread-key="/2016/06/05/移动HTML开发兼容性调整/"></div>
+<!-- Duoshuo Comment END -->
+  
+</section>
+
+
+
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div>
+  
+  &copy; 2017 littleredhat
+  
+</div>
+Powered by <a href="http://zespia.tw/hexo/" title="Hexo" target="_blank" rel="external">Hexo</a> and <a href="http://pages.github.com/" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>
+
+<div class="clearfix"></div></footer>
+  
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        (function(){
+
+            $(window).scroll(function(){
+
+                var scrollTop = $(window).scrollTop();
+                if ( scrollTop >200 ){
+                    $("#main-nav").removeClass('normal_mode').addClass('top_mode');
+                } else{
+                    $("#main-nav").removeClass('top_mode').addClass('normal_mode');
+                }
+
+            });
+
+        })();
+    </script>
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox({
+      'titlePosition': 'inside'
+    });
+  })(jQuery);
+  </script>
+
+
+
+    
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"your_id"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = 'http://static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
+<script type="text/javascript">
+  
+  $(function(){
+
+    $('.title').hover(
+      function() {      
+        $(this).stop().animate(
+          {'marginLeft': '10px'}, 200
+        );   
+      }, 
+      function() {       
+        $(this).stop().animate({'marginLeft': '0px'}, 200);      
+      
+    });   
+
+  });
+
+</script>
+
+
+</body>
+</html>

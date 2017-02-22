@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>css实现多级下拉菜单 | IT小魔女</title>
+  <meta name="author" content="littleredhat">
+  
+  <meta name="description" content="文章目录
+html框架
+
+css样式
+
+
+本文介绍了使用纯css制作多级下拉菜单的方法。完成效果：多级下拉菜单的制作
+1.html框架12345678910111213141516171819202122&amp;lt;div class=&quot;menu&quot;&amp;gt;  	  &amp;lt;ul&amp;gt;        &amp;">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="css实现多级下拉菜单"/>
+  <meta property="og:site_name" content="IT小魔女"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="IT小魔女" type="application/atom+xml">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="/css/style.css">
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-368771XX-X']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <header id="header" class='normal_mode'>
+    <nav id="main-nav">
+  <ul class='container'>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+  </header>
+  <div id="content" class="container">
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+      <time datetime="2016-12-25T01:56:22.000Z"><a href="/2016/12/25/css实现多级下拉菜单/">Sun, Dec 25 2016, 9:56:22 am</a></time>
+
+  
+    <h1 class="title">css实现多级下拉菜单</h1>
+  
+
+
+
+<div class="clear"></div>
+      
+    </header>
+    <div class="entry">
+      
+        <h2 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h2><ol>
+<li><p>html框架</p>
+</li>
+<li><p>css样式</p>
+</li>
+</ol>
+<h3 id="本文介绍了使用纯css制作多级下拉菜单的方法。"><a href="#本文介绍了使用纯css制作多级下拉菜单的方法。" class="headerlink" title="本文介绍了使用纯css制作多级下拉菜单的方法。"></a>本文介绍了使用纯css制作多级下拉菜单的方法。</h3><h3 id="完成效果："><a href="#完成效果：" class="headerlink" title="完成效果："></a>完成效果：</h3><h1 id="多级下拉菜单的制作"><a href="#多级下拉菜单的制作" class="headerlink" title="多级下拉菜单的制作"></a>多级下拉菜单的制作</h1><p><img src="http://p1.bpimg.com/567571/a2f85d3107720824.png" alt="二级菜单"></p>
+<h2 id="1-html框架"><a href="#1-html框架" class="headerlink" title="1.html框架"></a>1.html框架</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"menu"</span>&gt;</span></div><div class="line">  	  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"second-menu"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>分类 <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"arrow"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"third-menu"</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>服装 <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"arrow"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">              	<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>女装<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">              	<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>男装<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">              	<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>箱包<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>数码<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>家电<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>关于我们<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>联系我们<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="2-css样式"><a href="#2-css样式" class="headerlink" title="2.css样式"></a>2.css样式</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line">a&#123;</div><div class="line">  text-decoration: none;</div><div class="line">  color: black;</div><div class="line">  font-size: 18px;</div><div class="line">&#125;</div><div class="line">a:hover&#123;</div><div class="line">  text-decoration: none;</div><div class="line">  color: white;</div><div class="line">  background-color: #000;</div><div class="line">&#125;</div><div class="line">/*箭头图标*/</div><div class="line">.arrow&#123;</div><div class="line">  position: absolute;</div><div class="line">  display: inline-block;</div><div class="line">  top: 15px;</div><div class="line">  left: 92px;</div><div class="line">  width: 0;</div><div class="line">  border-top: 6px solid transparent;</div><div class="line">  border-right: 6px solid transparent;</div><div class="line">  border-bottom: 6px solid transparent;</div><div class="line">  border-left: 6px solid gray;</div><div class="line">&#125;</div><div class="line">/*主要样式*/</div><div class="line">.menu&#123;</div><div class="line">  margin: auto;</div><div class="line">  height: 40px;</div><div class="line">  line-height: 40px;</div><div class="line">  background-color: #d5d5d5;</div><div class="line">&#125;</div><div class="line">.menu ul&#123;</div><div class="line">  display: block;</div><div class="line">  padding: 0;</div><div class="line">  list-style: none;</div><div class="line">&#125;</div><div class="line">.menu ul li&#123;</div><div class="line">  position: relative;</div><div class="line">  float: left;</div><div class="line">  text-align: center;</div><div class="line">&#125;</div><div class="line">.menu ul li a&#123;</div><div class="line">  display: block;</div><div class="line">  padding: 0 10px 0 10px;  </div><div class="line">  width: 100px;</div><div class="line">  border-left: 1px solid white;</div><div class="line">&#125;</div><div class="line">.menu ul li:first-child a&#123;</div><div class="line">  border: none;</div><div class="line">&#125;</div><div class="line">/*将多级菜单设置为隐藏*/</div><div class="line">.menu .second-menu ul&#123;</div><div class="line">  display: none;</div><div class="line">&#125;</div><div class="line">.menu .second-menu ul .third-menu ul&#123;</div><div class="line">  display: none;</div><div class="line">&#125;</div><div class="line">/*二级菜单*/</div><div class="line">.menu .second-menu:hover ul&#123;</div><div class="line">  display: block;</div><div class="line">&#125;</div><div class="line">.menu .second-menu:hover ul li&#123;</div><div class="line">  float: none;</div><div class="line">  margin: 3px 0 3px 0;</div><div class="line">  background-color: #d5d5d5;</div><div class="line">&#125;</div><div class="line">/*三级菜单*/</div><div class="line">.menu .second-menu ul .third-menu:hover ul&#123;</div><div class="line">  display: block;</div><div class="line">&#125;</div><div class="line">.menu .second-menu ul .third-menu:hover ul&#123;</div><div class="line">  position: absolute;</div><div class="line">  z-index: 10;</div><div class="line">  top: 0;</div><div class="line">  left: 120px;</div><div class="line">  float: none;</div><div class="line">&#125;</div><div class="line">.menu .second-menu ul .third-menu:hover ul li:first-child&#123;</div><div class="line">  margin-top: 0;</div><div class="line">&#125;</div><div class="line">.menu .second-menu ul .third-menu:hover ul li&#123;</div><div class="line">  margin-left: 3px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>箭头图标利用css中的<code>border</code>属性实现，通过以下语句可以得到各个方向的箭头：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"> /*向下的箭头*/</div><div class="line">&gt; .arrow&#123;</div><div class="line">&gt;   width: 0;</div><div class="line">&gt;   border-top: 5px solid transparent;</div><div class="line">&gt;   border-right: 5px solid transparent;</div><div class="line">&gt;   border-bottom: 5px solid transparent;</div><div class="line">&gt;   border-left: 5px solid #000;</div><div class="line">&gt; &#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>By <em>litteredhat</em></p>
+</blockquote>
+
+      
+    </div>
+    <footer>
+      
+          
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <span class="jiathis_txt">分享到：</span>
+  <a class="jiathis_button_weixin">微信</a>
+  <a class="jiathis_button_tsina">新浪微博</a>
+  <a class="jiathis_button_renren">人人网</a>
+  <a class="jiathis_button_qzone">QQ空间</a>
+  <a class="jiathis_button_douban">豆瓣</a>
+  <a class="jiathis_button_pocket">Pocket</a>
+  <a href="http://www.jiathis.com/share?uid=901656" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=901656" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          <div class="clearfix"></div>
+          <nav id="pagination">
+  
+    <a href="/2017/01/05/数组去重/" class="alignleft prev"><i class="fa fa-long-arrow-left"></i>Next</a>
+  
+  
+    <a href="/2016/06/05/移动HTML开发兼容性调整/" class="alignright next">Prev<i class="fa fa-long-arrow-right"></i></a>
+  
+  <div class="clearfix"></div>
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+      <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-thread-key="/2016/12/25/css实现多级下拉菜单/"></div>
+<!-- Duoshuo Comment END -->
+  
+</section>
+
+
+
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div>
+  
+  &copy; 2017 littleredhat
+  
+</div>
+Powered by <a href="http://zespia.tw/hexo/" title="Hexo" target="_blank" rel="external">Hexo</a> and <a href="http://pages.github.com/" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>
+
+<div class="clearfix"></div></footer>
+  
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        (function(){
+
+            $(window).scroll(function(){
+
+                var scrollTop = $(window).scrollTop();
+                if ( scrollTop >200 ){
+                    $("#main-nav").removeClass('normal_mode').addClass('top_mode');
+                } else{
+                    $("#main-nav").removeClass('top_mode').addClass('normal_mode');
+                }
+
+            });
+
+        })();
+    </script>
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox({
+      'titlePosition': 'inside'
+    });
+  })(jQuery);
+  </script>
+
+
+
+    
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"your_id"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = 'http://static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
+<script type="text/javascript">
+  
+  $(function(){
+
+    $('.title').hover(
+      function() {      
+        $(this).stop().animate(
+          {'marginLeft': '10px'}, 200
+        );   
+      }, 
+      function() {       
+        $(this).stop().animate({'marginLeft': '0px'}, 200);      
+      
+    });   
+
+  });
+
+</script>
+
+
+</body>
+</html>
