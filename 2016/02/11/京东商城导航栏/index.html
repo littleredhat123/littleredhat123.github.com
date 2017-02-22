@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>IT小魔女</title>
+  <title>京东商城导航栏的制作 | IT小魔女</title>
   <meta name="author" content="littleredhat">
+  
+  <meta name="description" content="文章目录效果图
+1.头文件1234567&amp;lt;head&amp;gt;	&amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;	&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/bootstrap.min.css&quot;/&amp;gt;	&amp;lt;link rel">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="京东商城导航栏的制作"/>
   <meta property="og:site_name" content="IT小魔女"/>
 
   
@@ -52,309 +55,7 @@
 </nav>
   </header>
   <div id="content" class="container">
-    <div id="cover">
-	<!--<div id="profile" alt="http://ww1.sinaimg.cn/large/6cea169fjw1edgyzma1xcj21kw16ohba.jpg">-->
-		<div id="profile" style="background:url(/hello.jpg)">
-			<!--<img src="/hello.jpg" alt="" />-->
-		<a href="/">
-			<div class="logo">
-				<img src="/logo.png" alt="Profile Picture">
-			</div>
-			<div id="title">IT小魔女</div>
-		</a>
-
-		
-		 <ul class="my-socials">
-  
-  <li>
-  	<a href="https://github.com/your_id" class="github" target="_blank">
-  		<i class="fa fa-github"></i>
-  	</a>
-  </li>
-  
-  <li>
-  	<a href="http://weibo.com/your_id" class="weibo" target="_blank">
-  		<i class="fa fa-weibo"></i>
-  	</a>
-  </li>
-  
- 
-</ul>
-	</div>
-</div>
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-      <time datetime="2017-02-08T07:56:22.000Z"><a href="/2017/02/08/数组去重/">Wed, Feb 8 2017, 3:56:22 pm</a></time>
-
-  
-    <h1 class="title"><a href="/2017/02/08/数组去重/">javascript数组去重最优解</a></h1>
-  
-
-
-
-  
-  <div class="tags">
-  	<i class="fa fa-tag"></i>
-    <a href="/tags/js/">js</a>, <a href="/tags/数组操作/">数组操作</a>, <a href="/tags/技术/">技术</a>
-  </div>
-
-<div class="clear"></div>
-      
-    </header>
-    <div class="entry">
-      
-        <h1 id="javascript数组去重最优解"><a href="#javascript数组去重最优解" class="headerlink" title="javascript数组去重最优解"></a>javascript数组去重最优解</h1><p>利用对象的属性来去重。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml"></span></div><div class="line">	var arr = [1,3,5,5,1,2,77,4,32,2,3];</div><div class="line">	var temp = [];     //规定一个新数组；用来保存最终输出的数组</div><div class="line">	var obj = &#123;&#125;;     //空对象 </div><div class="line">	for(var i = 0; i <span class="tag">&lt; <span class="attr">arr.length</span>; <span class="attr">i</span>++)&#123;</span></div><div class="line">		<span class="attr">if</span>(!<span class="attr">obj</span>[<span class="attr">arr</span>[<span class="attr">i</span>]])&#123;</div><div class="line">//取反 <span class="attr">true</span> 变<span class="attr">false</span> 不通过 重复的排除  <span class="attr">obj.1</span>=<span class="string">1</span> <span class="attr">undefined</span>;<span class="attr">obj.3</span>=<span class="string">1</span> <span class="attr">undefined</span>; <span class="attr">obj.5</span>=<span class="string">1</span> <span class="attr">undefined</span>		</div><div class="line">			<span class="attr">temp.push</span>(<span class="attr">arr</span>[<span class="attr">i</span>]); </div><div class="line">			<span class="attr">obj</span>[<span class="attr">arr</span>[<span class="attr">i</span>]] = <span class="string">1;</span></div><div class="line">			<span class="attr">console.log</span>(<span class="attr">obj</span>)</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="attr">console.log</span>(<span class="attr">temp</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer>
-      
-        <div class="alignleft">
-            <a href="/2017/02/08/数组去重/#more" class="more-link"><i class="fa fa-chevron-right"></i>Read More</a>
-        </div>
-        
-        
-          <div class="alignright"> 
-            <a href="http://yoursite.com/2017/02/08/数组去重/#comment" class="comment-link">
-              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2017/02/08/数组去重/">&nbsp;
-              </span>
-            </a>
-          </div>
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-      <time datetime="2017-02-05T05:22:32.000Z"><a href="/2017/02/05/表格排序/">Sun, Feb 5 2017, 1:22:32 pm</a></time>
-
-  
-    <h1 class="title"><a href="/2017/02/05/表格排序/">表格排序</a></h1>
-  
-
-
-
-<div class="clear"></div>
-      
-    </header>
-    <div class="entry">
-      
-        <h1 id="表格排序"><a href="#表格排序" class="headerlink" title="表格排序"></a>表格排序</h1><h3 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h3><h4 id="ensp-ensp-ensp-1-制作一个表格"><a href="#ensp-ensp-ensp-1-制作一个表格" class="headerlink" title="&ensp;&ensp;&ensp; 1.制作一个表格"></a>&ensp;&ensp;&ensp; 1.制作一个表格</h4><h4 id="ensp-ensp-ensp-2-获取对象"><a href="#ensp-ensp-ensp-2-获取对象" class="headerlink" title="&ensp;&ensp;&ensp; 2.获取对象"></a>&ensp;&ensp;&ensp; 2.获取对象</h4><h4 id="ensp-ensp-ensp-3-创建一个数组对象"><a href="#ensp-ensp-ensp-3-创建一个数组对象" class="headerlink" title="&ensp;&ensp;&ensp; 3.创建一个数组对象"></a>&ensp;&ensp;&ensp; 3.创建一个数组对象</h4><h4 id="ensp-ensp-ensp-4-封装正序方法"><a href="#ensp-ensp-ensp-4-封装正序方法" class="headerlink" title="&ensp;&ensp;&ensp; 4.封装正序方法"></a>&ensp;&ensp;&ensp; 4.封装正序方法</h4><h4 id="ensp-ensp-ensp-5-封装倒序方法"><a href="#ensp-ensp-ensp-5-封装倒序方法" class="headerlink" title="&ensp;&ensp;&ensp; 5.封装倒序方法"></a>&ensp;&ensp;&ensp; 5.封装倒序方法</h4><h4 id="ensp-ensp-ensp-6-遍历赋值"><a href="#ensp-ensp-ensp-6-遍历赋值" class="headerlink" title="&ensp;&ensp;&ensp; 6.遍历赋值"></a>&ensp;&ensp;&ensp; 6.遍历赋值</h4><h4 id="ensp-ensp-ensp-7-绑定点击事件"><a href="#ensp-ensp-ensp-7-绑定点击事件" class="headerlink" title="&ensp;&ensp;&ensp; 7.绑定点击事件"></a>&ensp;&ensp;&ensp; 7.绑定点击事件</h4><h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="http://i1.piimg.com/567571/1a37ae1c1e80f383.png" alt="表格排序"></p>
-<h2 id="1-制作一个表格"><a href="#1-制作一个表格" class="headerlink" title="1.制作一个表格"></a>1.制作一个表格</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"table"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"hh"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dian"</span> <span class="attr">flag</span>=<span class="string">"0"</span>&gt;</span>名称<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dian2"</span> <span class="attr">flag</span>=<span class="string">"0"</span>&gt;</span>修改日期<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dian3"</span> <span class="attr">flag</span>=<span class="string">"0"</span>&gt;</span>类型<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dian4"</span> <span class="attr">flag</span>=<span class="string">"0"</span>&gt;</span>大小<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> &gt;</span>13<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>文件夹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>1KB<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> &gt;</span>2.2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>jpeg<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>2KB<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> &gt;</span>7<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>html<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>1KB<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> &gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>ppt<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>3KB<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> &gt;</span>4.6<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>9<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>文件夹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>2KB<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> &gt;</span>11<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>6<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>文件夹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>5KB<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> &gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>JS<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>4KB<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="2-获取对象"><a href="#2-获取对象" class="headerlink" title="2.获取对象"></a>2.获取对象</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var big = document.getElementById("table");//获取表格</div><div class="line">var title = document.getElementsByClassName("hh")[0].children;//获取表头的名称 修改日期  类型  大小</div><div class="line">	console.log(title)</div><div class="line">var main = document.getElementsByClassName("one");//获取表格内容的所有ul </div><div class="line">	console.log(main);</div><div class="line"></div><div class="line">var lis = document.getElementsByTagName("li");//获取表格内容的所有li</div><div class="line">	console.dir(lis);</div><div class="line">var dian = document.getElementsByClassName("dian")[0];</div><div class="line">	console.dir(dian);</div><div class="line">var dian2 = document.getElementsByClassName("dian2")[0];</div><div class="line">var dian3 = document.getElementsByClassName("dian3")[0];</div><div class="line">var dian4 = document.getElementsByClassName("dian4")[0];</div><div class="line">	console.dir(dian4);</div></pre></td></tr></table></figure>
-<h2 id="3-创建一个数组对象"><a href="#3-创建一个数组对象" class="headerlink" title="3.创建一个数组对象"></a>3.创建一个数组对象</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">var data = [</div><div class="line">				&#123;</div><div class="line">					"name": parseFloat(main[0].children[0].innerHTML),</div><div class="line">					"time": parseFloat(main[0].children[1].innerHTML),</div><div class="line">					"type": main[0].children[2].innerHTML,</div><div class="line">					"size": main[0].children[3].innerHTML,</div><div class="line">				&#125;,</div><div class="line"></div><div class="line">				&#123;</div><div class="line">					"name": parseFloat(main[1].children[0].innerHTML),</div><div class="line">					"time": parseFloat(main[1].children[1].innerHTML),</div><div class="line">					"type": main[1].children[2].innerHTML,</div><div class="line">					"size": main[1].children[3].innerHTML,</div><div class="line">				&#125;, </div><div class="line">				&#123;</div><div class="line">					"name": parseFloat(main[2].children[0].innerHTML),</div><div class="line">					"time": parseFloat(main[2].children[1].innerHTML),</div><div class="line">					"type": main[2].children[2].innerHTML,</div><div class="line">					"size": main[2].children[3].innerHTML,</div><div class="line">				&#125;,</div><div class="line">				&#123;</div><div class="line">					"name": parseFloat(main[3].children[0].innerHTML),</div><div class="line">					"time": parseFloat(main[3].children[1].innerHTML),</div><div class="line">					"type": main[3].children[2].innerHTML,</div><div class="line">					"size": main[3].children[3].innerHTML,</div><div class="line">				&#125;,</div><div class="line">				&#123;</div><div class="line">					"name": parseFloat(main[4].children[0].innerHTML),</div><div class="line">					"time": parseFloat(main[4].children[1].innerHTML),</div><div class="line">					"type": main[4].children[2].innerHTML,</div><div class="line">					"size": main[4].children[3].innerHTML,</div><div class="line">				&#125;, </div><div class="line">				&#123;</div><div class="line">					"name": parseFloat(main[5].children[0].innerHTML),</div><div class="line">					"time": parseFloat(main[5].children[1].innerHTML),</div><div class="line">					"type": main[5].children[2].innerHTML,</div><div class="line">					"size": main[5].children[3].innerHTML,</div><div class="line">				&#125;, </div><div class="line">				&#123;</div><div class="line">					"name": parseFloat(main[6].children[0].innerHTML),</div><div class="line">					"time": parseFloat(main[6].children[1].innerHTML),</div><div class="line">					"type": main[6].children[2].innerHTML,</div><div class="line">					"size": main[6].children[3].innerHTML,</div><div class="line">				&#125;,</div><div class="line"></div><div class="line">			]</div></pre></td></tr></table></figure>
-<p>data为一个数组 数组里面有7个对象 每个对象都有4个属性  name,time,type,size</p>
-<h2 id="4-封装正序方法"><a href="#4-封装正序方法" class="headerlink" title="4.封装正序方法"></a>4.封装正序方法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function zhengxu(name)&#123;</div><div class="line">		 	for(var i = 0; i &lt; data.length; i++) &#123;</div><div class="line">				for(var j = 0; j &lt; data.length - i - 1; j++) &#123;</div><div class="line">					if(data[j][name] &gt; data[j + 1][name]) &#123;</div><div class="line">						var x = data[j];</div><div class="line">						data[j] = data[j + 1];</div><div class="line">						data[j + 1] = x;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">		&#125;</div></pre></td></tr></table></figure>
-<p>使用冒泡排序的原理 对每个属性正序排列</p>
-<h2 id="5-封装倒序方法"><a href="#5-封装倒序方法" class="headerlink" title="5.封装倒序方法"></a>5.封装倒序方法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function daoxu(name)&#123;</div><div class="line">		 	for(var i = 0; i &lt; data.length; i++) &#123;</div><div class="line">				for(var j = 0; j &lt; data.length - i - 1; j++) &#123;</div><div class="line">					if(data[j][name] &lt; data[j + 1][name]) &#123;</div><div class="line">						var x = data[j];</div><div class="line">						data[j] = data[j + 1];</div><div class="line">						data[j + 1] = x;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">		&#125;</div></pre></td></tr></table></figure>
-<h2 id="6-遍历赋值"><a href="#6-遍历赋值" class="headerlink" title="6.遍历赋值"></a>6.遍历赋值</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function show() &#123;</div><div class="line">				for (var i=0;i&lt;main.length; i++)&#123;</div><div class="line">					main[i].children[0].innerHTML=data[i].name;</div><div class="line">				&#125;</div><div class="line">				for (var i=0;i&lt;main.length; i++)&#123;</div><div class="line">					main[i].children[1].innerHTML=data[i].time;</div><div class="line">				&#125;</div><div class="line">				for (var i=0;i&lt;main.length; i++)&#123;</div><div class="line">					main[i].children[2].innerHTML=data[i].type;</div><div class="line">				&#125;</div><div class="line">				for (var i=0;i&lt;main.length; i++)&#123;</div><div class="line">					main[i].children[3].innerHTML=data[i].size;</div><div class="line">				&#125;</div><div class="line">			&#125;</div></pre></td></tr></table></figure>
-<h2 id="7-绑定点击事件"><a href="#7-绑定点击事件" class="headerlink" title="7.绑定点击事件"></a>7.绑定点击事件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">dian.onclick = function () &#123;</div><div class="line">		if(dian.flag=="0")&#123;</div><div class="line">			zhengxu("name");</div><div class="line">			dian.flag=1;</div><div class="line">		&#125;else&#123;</div><div class="line">			daoxu("name");</div><div class="line">			dian.flag=0;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		show();</div><div class="line">	&#125;</div><div class="line">dian2.onclick = function () &#123;</div><div class="line">		if(dian.flag=="0")&#123;</div><div class="line">			zhengxu("time");</div><div class="line">			dian.flag=1;</div><div class="line">		&#125;else&#123;</div><div class="line">			daoxu("time");</div><div class="line">			dian.flag=0;</div><div class="line">		&#125;</div><div class="line">		show();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">dian3.onclick = function () &#123;</div><div class="line">		if(dian.flag=="0")&#123;</div><div class="line">		zhengxu("type");</div><div class="line">		dian.flag=1;</div><div class="line">		&#125;else&#123;</div><div class="line">			daoxu("type");</div><div class="line">			dian.flag=0;</div><div class="line">		&#125;</div><div class="line">		show();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">dian4.onclick = function () &#123;</div><div class="line">		if(dian.flag=="0")&#123;</div><div class="line">		zhengxu("size");</div><div class="line">		dian.flag=1;</div><div class="line">		&#125;else&#123;</div><div class="line">			daoxu("size");</div><div class="line">			dian.flag=0;</div><div class="line">		&#125;</div><div class="line">		show();</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>February 5, 2017 By <em>litteredhat</em></p>
-</blockquote>
-
-      
-    </div>
-    <footer>
-      
-        <div class="alignleft">
-            <a href="/2017/02/05/表格排序/#more" class="more-link"><i class="fa fa-chevron-right"></i>Read More</a>
-        </div>
-        
-        
-          <div class="alignright"> 
-            <a href="http://yoursite.com/2017/02/05/表格排序/#comment" class="comment-link">
-              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2017/02/05/表格排序/">&nbsp;
-              </span>
-            </a>
-          </div>
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-      <time datetime="2016-12-25T01:56:22.000Z"><a href="/2016/12/25/css实现多级下拉菜单/">Sun, Dec 25 2016, 9:56:22 am</a></time>
-
-  
-    <h1 class="title"><a href="/2016/12/25/css实现多级下拉菜单/">css实现多级下拉菜单</a></h1>
-  
-
-
-
-<div class="clear"></div>
-      
-    </header>
-    <div class="entry">
-      
-        <h2 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h2><ol>
-<li><p>html框架</p>
-</li>
-<li><p>css样式</p>
-</li>
-</ol>
-<h3 id="本文介绍了使用纯css制作多级下拉菜单的方法。"><a href="#本文介绍了使用纯css制作多级下拉菜单的方法。" class="headerlink" title="本文介绍了使用纯css制作多级下拉菜单的方法。"></a>本文介绍了使用纯css制作多级下拉菜单的方法。</h3><h3 id="完成效果："><a href="#完成效果：" class="headerlink" title="完成效果："></a>完成效果：</h3><h1 id="多级下拉菜单的制作"><a href="#多级下拉菜单的制作" class="headerlink" title="多级下拉菜单的制作"></a>多级下拉菜单的制作</h1><p><img src="http://p1.bpimg.com/567571/a2f85d3107720824.png" alt="二级菜单"></p>
-<h2 id="1-html框架"><a href="#1-html框架" class="headerlink" title="1.html框架"></a>1.html框架</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"menu"</span>&gt;</span></div><div class="line">  	  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"second-menu"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>分类 <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"arrow"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"third-menu"</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>服装 <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"arrow"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">              	<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>女装<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">              	<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>男装<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">              	<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>箱包<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>数码<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>家电<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>关于我们<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>联系我们<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="2-css样式"><a href="#2-css样式" class="headerlink" title="2.css样式"></a>2.css样式</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line">a&#123;</div><div class="line">  text-decoration: none;</div><div class="line">  color: black;</div><div class="line">  font-size: 18px;</div><div class="line">&#125;</div><div class="line">a:hover&#123;</div><div class="line">  text-decoration: none;</div><div class="line">  color: white;</div><div class="line">  background-color: #000;</div><div class="line">&#125;</div><div class="line">/*箭头图标*/</div><div class="line">.arrow&#123;</div><div class="line">  position: absolute;</div><div class="line">  display: inline-block;</div><div class="line">  top: 15px;</div><div class="line">  left: 92px;</div><div class="line">  width: 0;</div><div class="line">  border-top: 6px solid transparent;</div><div class="line">  border-right: 6px solid transparent;</div><div class="line">  border-bottom: 6px solid transparent;</div><div class="line">  border-left: 6px solid gray;</div><div class="line">&#125;</div><div class="line">/*主要样式*/</div><div class="line">.menu&#123;</div><div class="line">  margin: auto;</div><div class="line">  height: 40px;</div><div class="line">  line-height: 40px;</div><div class="line">  background-color: #d5d5d5;</div><div class="line">&#125;</div><div class="line">.menu ul&#123;</div><div class="line">  display: block;</div><div class="line">  padding: 0;</div><div class="line">  list-style: none;</div><div class="line">&#125;</div><div class="line">.menu ul li&#123;</div><div class="line">  position: relative;</div><div class="line">  float: left;</div><div class="line">  text-align: center;</div><div class="line">&#125;</div><div class="line">.menu ul li a&#123;</div><div class="line">  display: block;</div><div class="line">  padding: 0 10px 0 10px;  </div><div class="line">  width: 100px;</div><div class="line">  border-left: 1px solid white;</div><div class="line">&#125;</div><div class="line">.menu ul li:first-child a&#123;</div><div class="line">  border: none;</div><div class="line">&#125;</div><div class="line">/*将多级菜单设置为隐藏*/</div><div class="line">.menu .second-menu ul&#123;</div><div class="line">  display: none;</div><div class="line">&#125;</div><div class="line">.menu .second-menu ul .third-menu ul&#123;</div><div class="line">  display: none;</div><div class="line">&#125;</div><div class="line">/*二级菜单*/</div><div class="line">.menu .second-menu:hover ul&#123;</div><div class="line">  display: block;</div><div class="line">&#125;</div><div class="line">.menu .second-menu:hover ul li&#123;</div><div class="line">  float: none;</div><div class="line">  margin: 3px 0 3px 0;</div><div class="line">  background-color: #d5d5d5;</div><div class="line">&#125;</div><div class="line">/*三级菜单*/</div><div class="line">.menu .second-menu ul .third-menu:hover ul&#123;</div><div class="line">  display: block;</div><div class="line">&#125;</div><div class="line">.menu .second-menu ul .third-menu:hover ul&#123;</div><div class="line">  position: absolute;</div><div class="line">  z-index: 10;</div><div class="line">  top: 0;</div><div class="line">  left: 120px;</div><div class="line">  float: none;</div><div class="line">&#125;</div><div class="line">.menu .second-menu ul .third-menu:hover ul li:first-child&#123;</div><div class="line">  margin-top: 0;</div><div class="line">&#125;</div><div class="line">.menu .second-menu ul .third-menu:hover ul li&#123;</div><div class="line">  margin-left: 3px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>箭头图标利用css中的<code>border</code>属性实现，通过以下语句可以得到各个方向的箭头：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"> /*向下的箭头*/</div><div class="line">&gt; .arrow&#123;</div><div class="line">&gt;   width: 0;</div><div class="line">&gt;   border-top: 5px solid transparent;</div><div class="line">&gt;   border-right: 5px solid transparent;</div><div class="line">&gt;   border-bottom: 5px solid transparent;</div><div class="line">&gt;   border-left: 5px solid #000;</div><div class="line">&gt; &#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>By <em>litteredhat</em></p>
-</blockquote>
-
-      
-    </div>
-    <footer>
-      
-        <div class="alignleft">
-            <a href="/2016/12/25/css实现多级下拉菜单/#more" class="more-link"><i class="fa fa-chevron-right"></i>Read More</a>
-        </div>
-        
-        
-          <div class="alignright"> 
-            <a href="http://yoursite.com/2016/12/25/css实现多级下拉菜单/#comment" class="comment-link">
-              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2016/12/25/css实现多级下拉菜单/">&nbsp;
-              </span>
-            </a>
-          </div>
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-      <time datetime="2016-06-05T07:56:22.000Z"><a href="/2016/06/05/移动HTML开发兼容性调整/">Sun, Jun 5 2016, 3:56:22 pm</a></time>
-
-  
-    <h1 class="title"><a href="/2016/06/05/移动HTML开发兼容性调整/">移动HTML开发兼容性调整(meta篇)</a></h1>
-  
-
-
-
-  
-  <div class="tags">
-  	<i class="fa fa-tag"></i>
-    <a href="/tags/技术/">技术</a>, <a href="/tags/HTML/">HTML</a>, <a href="/tags/兼容性/">兼容性</a>
-  </div>
-
-<div class="clear"></div>
-      
-    </header>
-    <div class="entry">
-      
-        <h1 id="移动HTML开发兼容性调整-meta篇"><a href="#移动HTML开发兼容性调整-meta篇" class="headerlink" title="移动HTML开发兼容性调整(meta篇)"></a>移动HTML开发兼容性调整(meta篇)</h1><p>[TOC]</p>
-<h2 id="控制视口"><a href="#控制视口" class="headerlink" title="控制视口"></a>控制视口</h2><p>在 <code>&lt;head&gt;</code> 标签中添加</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewpor"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1, minimum-scale=1, maximun-scale=1, user-scalable=no"</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>达到控制视口和控制缩放的效果。</p>
-<p>scale属性依次为：初始化缩放比例为1，最小缩放比例为1，最大缩放比例为1，是否允许用户缩放。</p>
-<h2 id="关闭手机号码检测"><a href="#关闭手机号码检测" class="headerlink" title="关闭手机号码检测"></a>关闭手机号码检测</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telephone=no"</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>关闭邮箱检测为email</p>
-      
-    </div>
-    <footer>
-      
-        <div class="alignleft">
-            <a href="/2016/06/05/移动HTML开发兼容性调整/#more" class="more-link"><i class="fa fa-chevron-right"></i>Read More</a>
-        </div>
-        
-        
-          <div class="alignright"> 
-            <a href="http://yoursite.com/2016/06/05/移动HTML开发兼容性调整/#comment" class="comment-link">
-              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2016/06/05/移动HTML开发兼容性调整/">&nbsp;
-              </span>
-            </a>
-          </div>
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
+    <article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -374,7 +75,7 @@
       <time datetime="2016-02-11T02:56:00.000Z"><a href="/2016/02/11/京东商城导航栏/">Thu, Feb 11 2016, 10:56:00 am</a></time>
 
   
-    <h1 class="title"><a href="/2016/02/11/京东商城导航栏/">京东商城导航栏的制作</a></h1>
+    <h1 class="title">京东商城导航栏的制作</h1>
   
 
 
@@ -403,18 +104,30 @@
     </div>
     <footer>
       
-        <div class="alignleft">
-            <a href="/2016/02/11/京东商城导航栏/#more" class="more-link"><i class="fa fa-chevron-right"></i>Read More</a>
-        </div>
-        
-        
-          <div class="alignright"> 
-            <a href="http://yoursite.com/2016/02/11/京东商城导航栏/#comment" class="comment-link">
-              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2016/02/11/京东商城导航栏/">&nbsp;
-              </span>
-            </a>
-          </div>
-        
+          
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <span class="jiathis_txt">分享到：</span>
+  <a class="jiathis_button_weixin">微信</a>
+  <a class="jiathis_button_tsina">新浪微博</a>
+  <a class="jiathis_button_renren">人人网</a>
+  <a class="jiathis_button_qzone">QQ空间</a>
+  <a class="jiathis_button_douban">豆瓣</a>
+  <a class="jiathis_button_pocket">Pocket</a>
+  <a href="http://www.jiathis.com/share?uid=901656" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=901656" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          <div class="clearfix"></div>
+          <nav id="pagination">
+  
+    <a href="/2016/06/05/移动HTML开发兼容性调整/" class="alignleft prev"><i class="fa fa-long-arrow-left"></i>Next</a>
+  
+  
+  <div class="clearfix"></div>
+</nav>
       
       <div class="clearfix"></div>
     </footer>
@@ -422,17 +135,17 @@
 </article>
 
 
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
 
-
-
-<nav id="pagination">
   
+      <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-thread-key="/2016/02/11/京东商城导航栏/"></div>
+<!-- Duoshuo Comment END -->
   
-  <div class="clearfix"></div>
-</nav>
+</section>
 
-<script src="/js/jquery.anystretch.min.js"></script>
-<script src="/js/cover.js"></script>
+
 
     <div class="clearfix"></div>
   </div>
